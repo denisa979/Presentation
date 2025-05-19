@@ -10,7 +10,8 @@ public class CompanyPage extends BasePage{
     private By welcomeMessage = By.xpath("//div//h1");
     private By primaryMenu = By.xpath("//ul[@id='menu-primary-menu']/li");
     private By careersBtn = By.xpath("//span[@data-text='Careers']");
-
+    private By allLinks = By.tagName("a");
+    
     public boolean isLogoDisplayed() {
         return driver.findElement(logo).isDisplayed();
     }
@@ -26,4 +27,8 @@ public class CompanyPage extends BasePage{
     public void clickCareersButton() {
         driver.findElement(careersBtn).click();
     }
+       public List<String> getLinks() {
+        return getElementsText(allLinks);
+    }
+    
 }
