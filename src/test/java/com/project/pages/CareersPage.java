@@ -15,6 +15,7 @@ public class CareersPage extends BasePage {
     private By positionTitles = By.xpath("//span[@class='accordion-title']");
     private By numberingElements = By.cssSelector("span.l__count");
     private By viewOpeningsBtn = By.xpath("//div[@class='magnetic']");
+    private By applyTodayBtn = By.linkText("Apply Today");
 
     public CareersPage() {
         super();
@@ -48,5 +49,9 @@ public class CareersPage extends BasePage {
 
     public void clickOpeningsButton() {
         driver.findElement(viewOpeningsBtn).click();
+    }
+
+    public void clickApplyTodayBtn(){
+        driver.findElement(applyTodayBtn).click();
     }
 }
