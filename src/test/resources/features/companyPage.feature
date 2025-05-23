@@ -1,6 +1,6 @@
 
 Feature: Company page
-@wip
+
       Scenario: Verify user can have access to open positions
 
         When User is on the company page
@@ -17,7 +17,3 @@ Feature: Company page
         And User should land on careers page
         Then User click "View Openings"
         And User should see all  open positions
-
-
-
-

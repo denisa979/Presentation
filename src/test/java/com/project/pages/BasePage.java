@@ -13,15 +13,12 @@ public abstract class BasePage {
    protected WebDriver driver;
 
     public BasePage() {
-        this.driver = Driver.getDriver(); // Assumes a Driver utility class exists
+        this.driver = Driver.getDriver(); 
     }
-
-    public List<String> getElementsText(By locator) {
+        public List<String> getElementsText(By locator) {
         List<WebElement> elements = driver.findElements(locator);
         return elements.stream()
             .map(WebElement::getText)
             .collect(Collectors.toList());
     }
 }
-
-
