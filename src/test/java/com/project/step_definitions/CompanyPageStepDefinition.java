@@ -2,6 +2,7 @@ package com.project.step_definitions;
 
 import com.project.pages.CareersPage;
 import com.project.pages.CompanyPage;
+import com.project.utilities.BrowserUtils;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -27,6 +28,7 @@ public class CompanyPageStepDefinition {
 
    @Then("User should be able to see company\"An agency fueled by purpose, with impact you can certify\"")
 public void user_should_be_able_to_see_company_an_agency_fueled_by_purpose_with_impact_you_can_certify() {
+       BrowserUtils.waitFor(3);
     String expected = "An agency fueled by purpose, with impact you can certify";
 String actual = companyPage.getWelcomeMessageText();
 
@@ -93,4 +95,3 @@ public void verify_careers_page() {
        assertEquals("Position count and numbering mismatch", positions.size(), numbers.size());
    }
 }
-
